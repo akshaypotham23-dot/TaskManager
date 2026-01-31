@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Manage your daily tasks efficiently</p>
+    </header>
+
+    <!-- Filters -->
+    <section class="filters">
+      <button type="button" onclick="filterTasks('All')">All</button>
+      <button type="button" onclick="filterTasks('Pending')">Pending</button>
+      <button type="button" onclick="filterTasks('Completed')">Completed</button>
+    </section>
+
+    <!-- Task Form -->
+    <section>
+      <form id="taskForm" class="task-form" autocomplete="off">
+        <input
+          type="text"
+          id="title"
+          placeholder="Task title"
+          required
+        />
+
+        <input
+          type="text"
+          id="description"
+          placeholder="Task description"
+        />
+
+        <select id="status">
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <!-- Task List -->
+    <section>
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
